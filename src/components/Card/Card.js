@@ -1,8 +1,8 @@
 import './Card.css';
 
-const Card = ({ title, description, price, setCartItems }) => {
+const Card = ({ title, description, price, onAddItem, id }) => {
 	const addItem = () => {
-		setCartItems({ title, description, price });
+		onAddItem({ title, description, price, id });
 	};
 
 	return (

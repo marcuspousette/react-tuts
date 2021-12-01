@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 const Products = (props) => {
 	const [products, setProducts] = useState(null);
-	const [cartItems, setCartItems] = useState();
+	const [cartItems, setCartItems] = useState([]);
 
 	const getProducts = () => {
 		setTimeout(() => {
@@ -20,16 +20,23 @@ const Products = (props) => {
 		console.log(cartItems);
 	}, [cartItems]);
 
+	const addItem = (item) => {
+		setCartItems((oldCartItems) => {
+			return [...oldCartItems, item];
+		});
+	};
+
 	const renderProducts = () => {
 		if (products === null) return <h1 style={{ color: 'white' }}>Loading ...</h1>;
 		return products.map((product, i) => {
 			return (
 				<Card
+					id={i}
 					key={i}
 					title={product.title}
 					description={product.description}
 					price={product.price}
-					setCartItems={setCartItems}
+					onAddItem={addItem}
 				/>
 			);
 		});
