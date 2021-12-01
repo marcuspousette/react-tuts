@@ -1,4 +1,4 @@
-import './index.css';
+import './Card.css';
 
 const Card = ({ title, description, price, setCartItems }) => {
 	const addItem = () => {

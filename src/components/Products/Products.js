@@ -1,5 +1,5 @@
-import './index.css';
-import Card from '../Card';
+import './Products.css';
+import Card from '../Card/Card';
 import { useEffect, useState } from 'react';
 
 const Products = (props) => {
