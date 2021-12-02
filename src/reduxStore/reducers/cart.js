@@ -9,7 +9,8 @@ const reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case actionTypes.RESET_CART:
 			return {
-				...state
+				...state,
+				products: []
 			};
 
 		case actionTypes.CALCULATE_TOTAL_CART_AMOUNT:

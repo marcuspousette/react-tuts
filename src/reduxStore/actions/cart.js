@@ -19,8 +19,8 @@ export const calculateTotalCartAmount = () => {
 };
 
 export const incrementProduct = (payload) => {
-	return (dispatch) => {
-		dispatch({ type: actionTypes.INCREMENT_PRODUCT, payload });
-		dispatch(calculateTotalCartAmount());
+	return {
+		type: actionTypes.INCREMENT_PRODUCT,
+		payload
 	};
 };

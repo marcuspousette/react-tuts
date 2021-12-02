@@ -1,7 +1,10 @@
 import './Card.css';
+import { connect } from 'react-redux';
+import { incrementProduct } from '../../reduxStore/actions/cart';
 
-const Card = ({ title, description, price, onAddItem, id }) => {
+const Card = ({ title, description, price, onAddItem, id, incrementProduct }) => {
 	const addItem = () => {
+		incrementProduct({ title, description, price, id });
 		onAddItem({ title, description, price, id });
 	};
 
@@ -17,4 +20,10 @@ const Card = ({ title, description, price, onAddItem, id }) => {
 	);
 };
 
-export default Card;
+const mapDispatchToProps = (dispatch) => {
+	return {
+		incrementProduct: (data) => dispatch(incrementProduct(data))
+	};
+};
+
+export default connect(null, mapDispatchToProps)(Card);
