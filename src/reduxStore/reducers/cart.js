@@ -1,7 +1,7 @@
 import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
-	totalPrice: 0,
+	totalPrice: 109,
 	products: []
 };
 

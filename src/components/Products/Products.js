@@ -1,5 +1,6 @@
 import './Products.css';
 import Card from '../Card/Card';
+import Cart from '../Cart/Cart';
 import { useEffect, useState } from 'react';
 
 const Products = (props) => {
@@ -15,10 +16,6 @@ const Products = (props) => {
 	};
 
 	useEffect(getProducts, []);
-
-	useEffect(() => {
-		console.log(cartItems);
-	}, [cartItems]);
 
 	const addItem = (item) => {
 		setCartItems((oldCartItems) => {
@@ -42,7 +39,12 @@ const Products = (props) => {
 		});
 	};
 
-	return <div className="Products">{renderProducts()}</div>;
+	return (
+		<div className="Products">
+			<Cart />
+			{renderProducts()}
+		</div>
+	);
 };
 
 export default Products;

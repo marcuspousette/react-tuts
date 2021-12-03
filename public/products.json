@@ -1,7 +1,7 @@
 {
 	"products": [
 		{
-			"title": "Vegan food",
+			"title": "Julmust",
 			"type": "vegetable",
 			"description": "Concept of vegan food",
 			"filename": "21.jpg",
@@ -9,16 +9,6 @@
 			"width": 299,
 			"price": 29.66,
 			"rating": 4
-		},
-		{
-			"title": "Breakfast with muesli",
-			"type": "dairy",
-			"description": "Concept of healthy breakfast with muesli",
-			"filename": "22.jpg",
-			"height": 450,
-			"width": 299,
-			"price": 22.7,
-			"rating": 2
 		},
         {
 			"title": "Pepparkakor",
