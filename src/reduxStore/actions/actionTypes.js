@@ -1,0 +1,2 @@
+export const INCREMENT_PRODUCT = 'INCREMENT_PRODUCT';
+export const RESET_CART = 'RESET_CART';
